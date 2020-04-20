@@ -1,0 +1,16 @@
+.add-btn{
+    width: 100px;
+    height: 40px;
+    background-color:red;
+    margin-left: 500px;
+    margin-top: -30px;
+    border-style: inset;
+    border-color: grey;
+    border-width: 7px;
+}
+
+@media only screen and (max-width: 600px){
+    .add-btn{
+        margin-bottom:100px;
+    }
+}

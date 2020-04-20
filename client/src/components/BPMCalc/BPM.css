@@ -1,0 +1,67 @@
+.BPMInput{
+width: 50px;
+margin-top: 20px;
+
+border-style: inset;
+border-color: lightgrey;
+
+
+}
+.BPMtext{
+    margin-top:23px; 
+   margin-left: -20px;
+}
+#calcButton{
+    width:100px;
+    height: 50px;
+    margin-left: 5px;
+    border-style: inset;
+    border-color: grey;
+    border-width: 7px;
+    color: black;
+    background-color: lightgrey;
+    
+}
+#calcPosition{
+    
+}
+.Calculator{
+    border-style: inset;
+    border-color: grey;
+    border-width: 5px;
+    margin-left: 100px;
+    height: 200px;
+    max-height: 200px;
+    width: 900px;
+    color: lightgrey;
+    background-color: black;
+
+}
+.secondRow{
+    margin-left: 75px;
+    margin-top: 50px;
+}
+.firstRow{
+    margin-left:130px;
+}
+.noteLength{
+    margin-left: 70px;
+}
+@media only screen and (max-width: 600px){
+    .Calculator{
+        width: 600px;
+        margin-top: 20px;
+        font-size: 10px;
+    }
+    .calcButton{
+        margin-left: 20px;
+        width:20px;
+    }
+    .secondRow{
+        margin-top: 0px;
+        margin-left: 35px;
+    }
+    .firstRow{
+        margin-left: 70px;
+    }
+}

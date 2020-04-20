@@ -1,0 +1,100 @@
+.Input{
+margin-top: 30px;
+margin-left: 50px;
+}
+.inputSize{
+    height: 100px;
+    margin-left: 100px;
+    width: 900px;
+    border-style:inset;
+    border-color: grey;
+    background-color: black;
+}
+.inputCol{
+    margin-left: 100px;
+}
+#bodyDiv{
+    background-color: lightgrey;
+    width: 1700px;;
+    height: 1000px;;
+}
+.player{
+    background-color:rgb(77, 74, 74);
+    border-style: inset;
+    border-color: grey;
+}
+.titleurlinput{
+    height: 100px;
+    background-color:black;
+    width: 640px;
+    border-style: inset; 
+    border-color: grey; 
+}
+
+
+.titleinput{
+margin-top: 30px;
+margin-left: 20px;
+border-style: inset;
+border-color: grey;
+}
+
+.urlinput{
+margin-top: 30px;
+margin-left: -80px;
+border-style: inset;
+border-color: grey;
+}
+.GenerateBtnLabel{
+    width: 450px;
+    height: 200px;
+    background-color:rgb(204, 204, 204);
+    color:rgb(109, 104, 104);
+    border-style: inset;
+    border-color: grey;
+    border-width: 7px;;
+    margin-left:100px;
+   
+}
+.playerComponent{
+    margin-left: 30px;
+}
+.infinitysymbol{
+    font-size: 200px;
+    margin-top: -75px;
+    margin-left: 125px;
+    text-decoration-color: lightgrey;
+    -webkit-text-stroke: 5px rgb(32, 32, 32);
+    text-shadow: 0px 0px 20px red;
+}
+.header{
+    margin-left: 20px;
+    color: red;
+    text-shadow:0px 0px 8px red;
+    -webkit-text-stroke: 1px rgb(32, 32, 32);
+}
+@media only screen and (max-width: 600px){
+    #bodyDiv{
+        height:3000px;
+
+    }
+
+    .urlinput{
+        margin-left:225px;
+        margin-top: -50px;
+    }
+    .inputSize{
+        width: 600px;
+    }
+    .playerComponent{
+        margin-left: 100px;
+    }
+    .GenerateBtnLabel{
+        width: 300px;
+    }
+    .infinitysymbol{
+        margin-left: 50px;
+        
+    }
+
+}

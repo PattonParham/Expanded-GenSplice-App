@@ -1,0 +1,21 @@
+.generate-btn{
+    width: 450px;
+    height: 200px;
+    background-color: red;
+    color: black;
+    border-style: inset;
+    border-color: grey;
+    border-width: 7px;
+    font-size: 50px;
+}
+.generate-btn::after{
+    box-shadow: 0 8px 16px 0 purple;
+}
+
+@media only screen and (max-width: 600px){
+    .generate-btn{
+        width: 300px;
+    }
+    
+    
+}

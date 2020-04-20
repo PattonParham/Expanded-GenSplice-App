@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Player renders correctly and matches snapshot 1`] = `
+<div
+  className="sc-bdVaJa bxqrcA"
+>
+  <iframe
+    allow="autoplay"
+    className="sc-bwzfXH jEJwhD"
+    data-src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/449016357"
+    id="sc-widget"
+    src=""
+  />
+</div>
+`;
