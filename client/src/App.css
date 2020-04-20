@@ -73,6 +73,19 @@ border-color: grey;
     text-shadow:0px 0px 8px red;
     -webkit-text-stroke: 1px rgb(32, 32, 32);
 }
+.maxmin{
+    margin-top: 12px;
+    width: 50px;
+    border-style: inset;
+    border-color: lightgrey;
+}
+.ms{
+    margin-left: -245px;
+    margin-top: 30px;
+    width: 50px;
+    border-style: inset;
+    border-color: lightgrey;
+}
 @media only screen and (max-width: 600px){
     #bodyDiv{
         height:3000px;

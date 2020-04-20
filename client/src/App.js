@@ -95,26 +95,24 @@ function handleStateReset(){
     one = false;
 }
 }
-
-
-    const generateAudio = (event) => {
-        
-        let one = false;
-        let two = false;
-        let three = false;
-        let four = false;
-        let count = 0;
-        //function PBs (Play Boolean) to play the audio files
-       function PB(){
-       if (one === false){
-           setPlayingBool(true);
-            one = true;
-       } else if (one === true){
-           setPlayingBool(false);
-           one = false;
-       }
-       console.log(playingBool);
+//function PBs (Play Boolean) to play the audio files
+let one = false;
+let two = false;
+let three = false;
+let four = false;
+let count = 0;
+function PB(){
+    if (one === false){
+        setPlayingBool(true);
+         one = true;
+    } else if (one === true){
+        setPlayingBool(false);
+        one = false;
     }
+    console.log(playingBool);
+ }
+
+
     function PBII(){
        if(two === false){
            setPlayingBoolII(true);
@@ -148,14 +146,7 @@ function handleStateReset(){
         
         
      }
-    //  function StopAll(){
 
-    //      if (playingBoolIV === true){
-    //         setPlayingBoolIV(false);
-    //      } else if (playingBoolIV === false){
-    //          setPlayingBoolIV(true);
-    //      }
-    //  }
      function handleFade(){
         if (fade = null){
           
@@ -184,6 +175,20 @@ function handleStateReset(){
 
 
      }
+
+     function getRndInteger(min, max){
+        return Math.floor(Math.random() * (max-min) + min)
+    }
+
+    const GoldenZoneOne = () =>{
+
+    }
+
+    const generateAudio = (event) => {
+        
+
+
+
      let wait = parseInt(formObject.inputOne);
      console.log(wait);
      let waitII = parseInt(formObject.inputTwo);
@@ -204,11 +209,6 @@ function handleStateReset(){
      let seekTwo = getRndInteger(0, soundLengthTwo);
      let seekThree = getRndInteger(0, soundLengthThree);
      let seekFour = getRndInteger(0, soundLengthFour);
-
-     function getRndInteger(min, max){
-         return Math.floor(Math.random() * (max-min) + min)
-     }
-     
 
      let SeekOne = ()=>{
          playerOne.current.seekTo(seekOne);
@@ -238,25 +238,13 @@ function handleStateReset(){
         setTimeout(PBIV, (wait+waitII+waitIII+waitIV));
         setTimeout(handleStateReset, (wait+waitII+waitIII+waitIV))
     }
+
 SeekOne();
 PB();
 generateLoop();
-
-
-
- 
-        // clearTimeout()
-
-      
-        
-// setInterval(SeekOne(),(wait+waitII+waitIII+waitIV));
-// setInterval(PB(),(wait+waitII+waitIII+waitIV));
 setInterval(generateLoop(), (wait+waitII+waitIII+waitIV));
-
-
-
-          
-    }
+      
+}
 
 
     return(
@@ -358,8 +346,27 @@ setInterval(generateLoop(), (wait+waitII+waitIII+waitIV));
          <BPMInput></BPMInput>
              </Row>
              <Row>
-                 <div className="inputSize">
+            
+             <div className="inputSize">
+            <Row>
+            <Col size="sm">
              <input id = "inOne" onChange={handleInputChange} name= "inputOne" value={formObject.inputOne} className="Input" placeholder="Enter value in ms"></input>
+             </Col>
+             <Col size="sm">
+                 <Row>
+                 <input className="maxmin"></input>
+                 </Row>
+                 <Row>
+                 <input className="maxmin"></input>
+                 </Row>
+
+             </Col>
+             <Col size="sm">
+             <Row>
+                 <input className="ms"></input>
+            </Row>
+             </Col>
+             </Row>
              </div>
              </Row>
              <Row>
