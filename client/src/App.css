@@ -15,8 +15,9 @@ margin-left: 50px;
 }
 #bodyDiv{
     background-color: lightgrey;
-    width: 1700px;;
-    height: 1000px;;
+    width: 1920px;;
+    height: 1080px;
+  
 }
 .player{
     background-color:rgb(77, 74, 74);

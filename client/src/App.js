@@ -3,10 +3,10 @@ import {ADD_SOUND} from "./utils/actions";
 import { useStoreContext } from "./utils/GlobalState";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Main from "./pages/main";
-
+import {Link} from "react-router-dom";
 import GenerateBtn from "./components/generateButton/generateButton";
 import AddBtn from "./components/AddButton/AddButton";
-
+import {List, ListItem} from "./components/List";
 import Header from "./components/header/header";
 import {Col, Row, Container } from "./components/Grid";
 import ReactPlayer from "react-player";
@@ -28,6 +28,24 @@ const playerOne = useRef(null);
 const playerTwo = useRef(null);
 const playerThree = useRef(null);
 const playerFour = useRef(null);
+
+const [sounds, setSounds] = useState([]);
+
+useEffect(()=>{
+    loadSounds()
+}, []);
+
+function loadSounds(){
+    API.getSounds()
+    .then(res => setSounds(res.data))
+    .catch(err => console.log(err));
+};
+
+function deleteSound(id){
+    API.deleteSound(id)
+    .then(res => loadSounds())
+    .catch(err => console.log(err));
+};
 
 const [formObject, setFormObject] = useState({
     inputOne: "",
@@ -51,8 +69,19 @@ const handleAddToDB = (e) =>{
         url: formObject.urlOne
     })
     .catch(err => console.log(err));
-}
+};
 
+function handleFormSubmit(event){
+    event.preventDefault();
+    if (formObject.title && formObject.author) {
+        API.saveSound({
+            title: formObject.titleOne,
+            url: formObject.urlOne
+        })
+        .then(res => loadSounds)
+        .catch(err => console.log(err));
+    }
+};
 // const titleRef = useRef();
 // const urlRef = useRef();
 // const [state, dispatch] = useStoreContext();
@@ -248,6 +277,7 @@ setInterval(generateLoop(), (wait+waitII+waitIII+waitIV));
 
 
     return(
+        <Router>
         <div id = "bodyDiv">
      <div>
          <Row>
@@ -282,7 +312,7 @@ setInterval(generateLoop(), (wait+waitII+waitIII+waitIV));
                 <Col size="lg">
                 <input  onChange={handleInputChange} className="urlinput" name="urlOne" value={formObject.urlOne} placeholder="url"></input>
                 </Col>
-              <AddBtn id ="AddOne" onClick={handleAddToDB}></AddBtn>
+              <AddBtn id ="AddOne" onClick={handleFormSubmit}></AddBtn>
               </Row>
             </div>
             </Row>
@@ -387,8 +417,22 @@ setInterval(generateLoop(), (wait+waitII+waitIII+waitIV));
              <Row>
             
         <div className="GenerateBtnLabel">
-            <p className="infinitysymbol">∞</p>
-            
+            {/* <p className="infinitysymbol">∞</p> */}
+            {sounds.length ? (
+                <List>
+                 {sounds.map(sound =>(
+                    <ListItem  key={sound._id}>
+                        <Link to={"/sounds" + sound._id}>
+                            <strong>
+                            {sound.title}{" "}{sound.url}
+                            </strong>
+                        </Link>
+                        <button onClick={() => deleteSound(sound._id)}>x</button>
+                    </ListItem>   
+
+                    ))}
+                </List>
+            ) : (<p></p>)}
         </div>
         
         
@@ -403,7 +447,7 @@ setInterval(generateLoop(), (wait+waitII+waitIII+waitIV));
 
         </div>
        
-    
+</Router>
         // <Router>
         //     <div>
         //         <Route path="/" component={Main} />
