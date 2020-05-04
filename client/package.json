@@ -18,7 +18,7 @@
     "react-soundcloud-widget-player": "^1.0.2"
   
   },
-  "root": "client/build",
+  "root": "build",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
