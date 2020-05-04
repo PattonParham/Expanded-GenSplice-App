@@ -87,6 +87,10 @@ border-color: grey;
     border-style: inset;
     border-color: lightgrey;
 }
+.AudioArchive{
+    color: black;
+    margin-left: 5px;
+}
 @media only screen and (max-width: 600px){
     #bodyDiv{
         height:3000px;

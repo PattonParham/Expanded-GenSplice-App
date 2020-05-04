@@ -5,7 +5,7 @@ export default {
        return axios.get("/api/sounds"); 
     },
     getSound: function(id){
-        return axios.get("/api/sounds" +id);
+        return axios.get("/api/sounds" + id);
      },
      deleteSound: function(id){
          return axios.delete("api/sounds" + id);

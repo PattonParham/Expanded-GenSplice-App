@@ -3,7 +3,7 @@ import {ADD_SOUND} from "./utils/actions";
 import { useStoreContext } from "./utils/GlobalState";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Main from "./pages/main";
-import {Link} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 import GenerateBtn from "./components/generateButton/generateButton";
 import AddBtn from "./components/AddButton/AddButton";
 // import DeleteBtn from "./components/DeleteBtn/index";
@@ -46,7 +46,6 @@ function loadSounds(){
 
 function deleteSound(id){
     API.deleteSound(id)
-    .then(res => loadSounds())
     .catch(err => console.log(err));
 };
 
@@ -419,6 +418,7 @@ setInterval(generateLoop(), (wait+waitII+waitIII+waitIV));
             
         <div className="GenerateBtnLabel">
             {/* <p className="infinitysymbol">∞</p> */}
+            <p className="AudioArchive">Audio Archive Database</p>
             {sounds.length ? (
                 <List>
                  {sounds.map(sound =>(
