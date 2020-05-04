@@ -6,6 +6,8 @@ import Main from "./pages/main";
 import {Link} from "react-router-dom";
 import GenerateBtn from "./components/generateButton/generateButton";
 import AddBtn from "./components/AddButton/AddButton";
+// import DeleteBtn from "./components/DeleteBtn/index";
+// import {checkPropTypes} from "prop-types";
 import {List, ListItem} from "./components/List";
 import Header from "./components/header/header";
 import {Col, Row, Container } from "./components/Grid";
@@ -13,6 +15,7 @@ import ReactPlayer from "react-player";
 import BPMInput from "./components/BPMCalc/BPM";
 import "./App.css";
 import API from "./utils/API";
+import DeleteBtn from "./components/DeleteBtn/DeleteBtn";
 // import { checkPropTypes } from "prop-types";
 
 
@@ -73,15 +76,16 @@ const handleAddToDB = (e) =>{
 
 function handleFormSubmit(event){
     event.preventDefault();
-    if (formObject.title && formObject.author) {
+    if (formObject.titleOne && formObject.urlOne) {
         API.saveSound({
             title: formObject.titleOne,
             url: formObject.urlOne
         })
-        .then(res => loadSounds)
+        .then(res => loadSounds())
         .catch(err => console.log(err));
     }
 };
+
 // const titleRef = useRef();
 // const urlRef = useRef();
 // const [state, dispatch] = useStoreContext();
@@ -102,7 +106,6 @@ function handleFormSubmit(event){
 //        });
 //    })
 //    .catch(err => console.log(err));
-
 // };
 
 useEffect(() => {
@@ -113,9 +116,7 @@ function handleInputChange(event) {
     const { name, value } = event.target;
     setFormObject({...formObject, [name]: value})
   };
-  const addAudio = () => {
-API.saveSound(formObject.inputOne);
-  }
+
 
 function handleStateReset(){
     let one = true;
@@ -427,7 +428,7 @@ setInterval(generateLoop(), (wait+waitII+waitIII+waitIV));
                             {sound.title}{" "}{sound.url}
                             </strong>
                         </Link>
-                        <button onClick={() => deleteSound(sound._id)}>x</button>
+                        <DeleteBtn onClick={() => deleteSound(sound._id)}></DeleteBtn>
                     </ListItem>   
 
                     ))}
