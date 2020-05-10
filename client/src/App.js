@@ -73,12 +73,49 @@ const handleAddToDB = (e) =>{
     .catch(err => console.log(err));
 };
 
+
 function handleFormSubmit(event){
     event.preventDefault();
     if (formObject.titleOne && formObject.urlOne) {
         API.saveSound({
             title: formObject.titleOne,
             url: formObject.urlOne
+        })
+        .then(res => loadSounds())
+        .catch(err => console.log(err));
+    }
+};
+
+function handleFormSubmitTwo(event){
+    event.preventDefault();
+    if (formObject.titleTwo && formObject.urlTwo) {
+        API.saveSound({
+            title: formObject.titleTwo,
+            url: formObject.urlTwo
+        })
+        .then(res => loadSounds())
+        .catch(err => console.log(err));
+    }
+};
+
+function handleFormSubmitThree(event){
+    event.preventDefault();
+    if (formObject.titleThree && formObject.urlThree) {
+        API.saveSound({
+            title: formObject.titleThree,
+            url: formObject.urlThree
+        })
+        .then(res => loadSounds())
+        .catch(err => console.log(err));
+    }
+};
+
+function handleFormSubmitFour(event){
+    event.preventDefault();
+    if (formObject.titleFour && formObject.urlFour) {
+        API.saveSound({
+            title: formObject.titleFour,
+            url: formObject.urlFour
         })
         .then(res => loadSounds())
         .catch(err => console.log(err));
@@ -329,7 +366,7 @@ setInterval(generateLoop(), (wait+waitII+waitIII+waitIV));
                 <Col size="lg">
                 <input onChange={handleInputChange} className="urlinput" name="urlTwo" value ={formObject.urlTwo} placeholder="url"></input>
                 </Col>
-              <AddBtn ></AddBtn>
+              <AddBtn id ="AddTwo" onClick={handleFormSubmitTwo}></AddBtn>
               </Row>
             </div>
             </Row>
@@ -346,7 +383,7 @@ setInterval(generateLoop(), (wait+waitII+waitIII+waitIV));
                 <Col size="lg">
                 <input onChange={handleInputChange} className="urlinput" name="urlThree" value ={formObject.urlThree} placeholder="url"></input>
                 </Col>
-              <AddBtn></AddBtn>
+              <AddBtn id ="AddThree" onClick={handleFormSubmitThree}></AddBtn>
               </Row>
             </div>
             </Row>
@@ -363,7 +400,7 @@ setInterval(generateLoop(), (wait+waitII+waitIII+waitIV));
                 <Col size="lg">
                 <input onChange={handleInputChange} className="urlinput" name="urlFour" value={formObject.urlFour} placeholder="url"></input>
                 </Col>
-              <AddBtn></AddBtn>
+              <AddBtn id ="AddFour" onClick={handleFormSubmitFour}></AddBtn>
               </Row>
             </div>
             </Row>
