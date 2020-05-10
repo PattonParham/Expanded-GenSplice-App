@@ -400,7 +400,7 @@ setInterval(generateLoop(), (wait+waitII+waitIII+waitIV));
                 <Col size="lg">
                 <input onChange={handleInputChange} className="urlinput" name="urlFour" value={formObject.urlFour} placeholder="url"></input>
                 </Col>
-              <AddBtn id ="AddFour" onClick={handleFormSubmitFour}></AddBtn>
+              <AddBtn></AddBtn>
               </Row>
             </div>
             </Row>
