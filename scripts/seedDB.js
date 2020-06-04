@@ -11,15 +11,15 @@ const soundSeed = [
 },
 {
     title: "C#Hisound1",
-    url: "https://soundcloud.com/user-482742119/csound3"
+    url: "https://soundcloud.com/user-482742119/chisound1"
 },
 {
     title: "Bsound2",
-    url: "https://soundcloud.com/user-482742119/csound3"
+    url: "https://soundcloud.com/user-482742119/bsound2"
 },
 {
     title: "Csound1",
-    url: "https://soundcloud.com/user-482742119/csound3"
+    url: "https://soundcloud.com/user-482742119/csound1"
 }
 ];
 

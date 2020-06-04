@@ -16,6 +16,7 @@ import BPMInput from "./components/BPMCalc/BPM";
 import "./App.css";
 import API from "./utils/API";
 import DeleteBtn from "./components/DeleteBtn/DeleteBtn";
+
 // import { checkPropTypes } from "prop-types";
 
 
@@ -72,6 +73,7 @@ const handleAddToDB = (e) =>{
     })
     .catch(err => console.log(err));
 };
+
 
 
 function handleFormSubmit(event){
@@ -275,6 +277,8 @@ function PB(){
      let seekTwo = getRndInteger(0, soundLengthTwo);
      let seekThree = getRndInteger(0, soundLengthThree);
      let seekFour = getRndInteger(0, soundLengthFour);
+   
+   
 
      let SeekOne = ()=>{
          playerOne.current.seekTo(seekOne);
