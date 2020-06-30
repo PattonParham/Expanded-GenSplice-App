@@ -124,27 +124,8 @@ function handleFormSubmitFour(event){
     }
 };
 
-// const titleRef = useRef();
-// const urlRef = useRef();
-// const [state, dispatch] = useStoreContext();
-// let url = urlRef.current.value;
-// let title = titleRef.current.value;
-// url = formObject.urlOne;
-// title = formObject.titleOne;
-// const handleAddToDB = (e) => {
-//     e.preventDefault();
-//    API.saveSound({
-//        title: title,
-//        url: url
-//    })
-//    .then(result =>{
-//        dispatch({
-//            type: ADD_SOUND,
-//            sound: result.data
-//        });
-//    })
-//    .catch(err => console.log(err));
-// };
+
+
 
 useEffect(() => {
 
@@ -248,9 +229,7 @@ function PB(){
         return Math.floor(Math.random() * (max-min) + min)
     }
 
-    const GoldenZoneOne = () =>{
-
-    }
+   
 
     const generateAudio = (event) => {
         
@@ -423,20 +402,7 @@ setInterval(generateLoop(), (wait+waitII+waitIII+waitIV));
             <Col size="sm">
              <input id = "inOne" onChange={handleInputChange} name= "inputOne" value={formObject.inputOne} className="Input" placeholder="Enter value in ms"></input>
              </Col>
-             <Col size="sm">
-                 <Row>
-                 <input className="maxmin"></input>
-                 </Row>
-                 <Row>
-                 <input className="maxmin"></input>
-                 </Row>
-
-             </Col>
-             <Col size="sm">
-             <Row>
-                 <input className="ms"></input>
-            </Row>
-             </Col>
+       
              </Row>
              </div>
              </Row>
