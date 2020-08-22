@@ -3,7 +3,7 @@ An application designed to generate random audio, built using React
 
 As a producer I want an application so that I can expedite the process of sifting through audio and manually splicing together different sounds.  
 
-Instructions: Load any sound in using a soundcloud url, and input millisecond values assigned to each sound module. Included is a note length calculator that returns to the user millisecond values of quarter notes, half notes, etc. These are suggestions to input into each of the boxes associated with the modules. Click the Generate Audio Button unlimited times to generate newly spliced audio. 
+Instructions: Load any sound in using a soundcloud url, and input millisecond values assigned to each sound module. Included is a note length calculator that returns to the user millisecond values of quarter notes, half notes, etc. These are suggestions to input into each of the boxes associated with the modules. Click the Generate Audio Button unlimited times to generate newly spliced audio. The Audio Archive Database contains some DB seeded Title and Url pairs for the user to test the application within the window upon load. 
 
 client - folder containing node_modules, the public folder, and the src (source) folder along with json files.
 
