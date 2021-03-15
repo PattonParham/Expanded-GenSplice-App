@@ -23,13 +23,13 @@ function BPMInput(){
         let thirtytwoNote = document.getElementById("thirtysecondNote");
         let sixtyfourNote = document.getElementById("sixtyfourthNote");
 
-        fullNote.value = (60/inputVal)*1000;
-        halfNote.value = (30/inputVal) * 1000;
-        quartNote.value = (15/inputVal) * 1000;
-        eighthNote.value = (7.5/inputVal) * 1000;
-        sixteenNote.value = (3.75/inputVal) * 1000;
-        thirtytwoNote.value = (1.875/inputVal)* 1000;
-        sixtyfourNote.value = (.9375/inputVal) * 1000;
+        fullNote.value = (240/inputVal)*1000;
+        halfNote.value = (120/inputVal) * 1000;
+        quartNote.value = (60/inputVal) * 1000;
+        eighthNote.value = (30/inputVal) * 1000;
+        sixteenNote.value = (15/inputVal) * 1000;
+        thirtytwoNote.value = (7.5/inputVal)* 1000;
+        sixtyfourNote.value = (3.75/inputVal) * 1000;
         console.log(fullNote.value);
         let fullNoteVal = fullNote.value;
         let halfNoteVal = halfNote.value;
@@ -63,19 +63,19 @@ return (
         
             <div className="noteLength">
                 1/64Note (ms)
-                <p id ="sixtyfourthNote">{sixtyfour}</p>
+                <p className = "msValue"  id ="sixtyfourthNote">{sixtyfour}</p>
             </div>
         {/* </Col> */}
         {/* <Col size="lg"> */}
         <div className="noteLength">
                 1/32Note (ms)
-                <p id ="thirtysecondNote">{thirtytwo}</p>
+                <p className = "msValue"  id ="thirtysecondNote">{thirtytwo}</p>
             </div>
         {/* </Col> */}
         {/* <Col size="lg"> */}
         <div className="noteLength">
                 1/16Note (ms)
-                <p id ="sixteenthNote">{sixteen}</p>
+                <p className = "msValue" id ="sixteenthNote">{sixteen}</p>
             </div>
         {/* </Col> */}
         </Row>
@@ -90,13 +90,13 @@ return (
         {/* <Col size="lg"> */}
         <div className="noteLength">
                 1/8Note (ms)
-                <p id = "eighthNote">{eighth}</p>
+                <p className = "msValue"  id = "eighthNote">{eighth}</p>
             </div>
         {/* </Col> */}
         {/* <Col size="lg"> */}
         <div className="noteLength">
                 1/4Note (ms)
-                <p id = "quartNote">{quart}</p>
+                <p className = "msValue"  id = "quartNote">{quart}</p>
             </div>
             {/* </Col> */}
         {/* <Col size="lg"> */}
@@ -108,7 +108,7 @@ return (
             {/* <Col  size="lg"> */}
             <div className="noteLength">
                 FullNote (ms)
-                <p  id = "fullNote"> {full}</p>
+                <p className = "msValue"  id = "fullNote"> {full}</p>
             <div>
             </div>
             </div>
